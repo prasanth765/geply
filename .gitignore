@@ -1,72 +1,15 @@
-﻿# Python
-__pycache__/
+﻿__pycache__/
 *.pyc
 *.pyo
-*.pyd
-.Python
-*.egg-info/
-.pytest_cache/
-.mypy_cache/
-venv/
-.venv/
-
-# Node
+.env
+*.db
+*.db-shm
+*.db-wal
 node_modules/
 dist/
 .vite/
-.parcel-cache/
-.eslintcache
-
-# Environment & secrets (NEVER commit)
-.env
-.env.local
-.env.*.local
-*.key
-*.pem
-
-# Databases (contain real data — NEVER commit)
-*.db
-*.db-journal
-*.db.backup_*
-*.sqlite
-*.sqlite3
-
-# User-uploaded content (PII — NEVER commit)
 uploads/
-!uploads/.gitkeep
-
-# Temporary working files
-_cleanup_*/
-_migrate_*.py
-_direct_test.html
-*.backup
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs
 *.log
-logs/
-
-# DB backups — all variants
-*.db.pre_*
-*.db.backup*
-
-# Backup files with numbered suffixes (.backup2, .backup3, etc.)
-*.backup[0-9]*
-
-
-# Backup and scratch files (all variants)
-*.backup
-*.backup*
-*.bak
-*.orig
-*.rej
-*~
+.DS_Store
+venv/
+.venv/
