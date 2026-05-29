@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : notifications.py
+  Purpose : Real-time notification system for recruiter alerts on candidate actions.
+====================================================================
+"""
 from __future__ import annotations
 
 import json

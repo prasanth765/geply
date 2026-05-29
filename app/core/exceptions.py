@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : exceptions.py
+  Purpose : Custom application exception classes with structured error responses.
+====================================================================
+"""
 from __future__ import annotations
 
 

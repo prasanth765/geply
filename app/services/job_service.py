@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : job_service.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
 from __future__ import annotations
 
 import uuid

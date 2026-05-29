@@ -1,4 +1,13 @@
 """
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : interview_session.py
+  Purpose : REST endpoint to exchange JWT invite tokens for interview session data including interview ID, candidate info and job details.
+====================================================================
+"""
+"""
 app/api/routes/interview_session.py
 GET /api/v1/interview/session/{token}
 """

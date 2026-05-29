@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : migrate_app_settings.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
 import sqlite3
 
 conn = sqlite3.connect('geply.db')

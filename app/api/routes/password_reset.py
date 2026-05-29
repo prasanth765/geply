@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : password_reset.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
 ﻿"""
 Stateless password reset via signed JWT.
 

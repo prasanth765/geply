@@ -1,4 +1,13 @@
 """
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : screening_service.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
+"""
 JD Match Screening Service.
 
 Pre-interview resume-vs-JD screening score. Triggered from resume_worker.py

@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : auth_service.py
+  Purpose : Business logic for authentication: password hashing, JWT creation and validation.
+====================================================================
+"""
 from __future__ import annotations
 
 import structlog

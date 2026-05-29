@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : interview_repo.py
+  Purpose : Data access layer for interview session records.
+====================================================================
+"""
 from __future__ import annotations
 
 from typing import Sequence

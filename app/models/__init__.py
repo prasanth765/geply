@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : __init__.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
 from app.models.base import Base, get_db, create_tables, drop_tables
 from app.models.user import User
 from app.models.job import Job

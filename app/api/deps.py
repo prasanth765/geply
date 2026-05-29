@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : deps.py
+  Purpose : FastAPI dependency injection: database session, current user auth and ownership checks.
+====================================================================
+"""
 from __future__ import annotations
 
 from typing import Annotated

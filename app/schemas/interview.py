@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : interview.py
+  Purpose : Interview ORM model: scores, transcript, proctoring events and recording paths.
+====================================================================
+"""
 from __future__ import annotations
 
 from datetime import datetime

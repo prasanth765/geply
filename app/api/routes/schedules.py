@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : schedules.py
+  Purpose : Self-scheduling system for candidates: slot booking, rescheduling and availability management.
+====================================================================
+"""
 from __future__ import annotations
 
 import uuid

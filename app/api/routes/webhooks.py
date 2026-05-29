@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : webhooks.py
+  Purpose : Webhook receivers for external service callbacks.
+====================================================================
+"""
 from __future__ import annotations
 
 import structlog

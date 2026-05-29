@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : reports.py
+  Purpose : Report generation routes: fetch AI-scored interview reports with skill gap analysis.
+====================================================================
+"""
 from __future__ import annotations
 
 from fastapi import APIRouter

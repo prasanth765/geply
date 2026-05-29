@@ -1,4 +1,13 @@
 """
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : add_kb_fields.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
+"""
 Migration: add office_locations, shift_flexible to jobs
         + company_kb to users
 

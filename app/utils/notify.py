@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : notify.py
+  Purpose : Utility functions for creating and dispatching recruiter notifications.
+====================================================================
+"""
 """Utility to create notifications from anywhere in the app.
 
 Usage (async context — routes):

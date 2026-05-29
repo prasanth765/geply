@@ -1,4 +1,13 @@
 """
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : questions.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
+"""
 Candidate Interview Question CRUD endpoints.
 
 All routes are scoped under /api/v1/questions and require recruiter auth

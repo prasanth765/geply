@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : auth.py
+  Purpose : Authentication routes: login, register, JWT token issuance and profile management.
+====================================================================
+"""
 from __future__ import annotations
 
 import uuid

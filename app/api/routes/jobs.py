@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : jobs.py
+  Purpose : Job posting CRUD operations including JD upload, resume bulk upload and invite generation.
+====================================================================
+"""
 from __future__ import annotations
 
 from fastapi import APIRouter, File, Form, UploadFile

@@ -1,4 +1,13 @@
 """
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : internal.py
+  Purpose : Internal API routes for text-mode interview chat used as non-voice fallback.
+====================================================================
+"""
+"""
 internal.py — Interview AI route handlers.
 
 Clean separation of concerns:

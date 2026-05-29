@@ -1,4 +1,13 @@
 """
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : tts_service.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
+"""
 tts_service.py — Server-side TTS using Microsoft Edge neural voices.
 Voice: en-US-AriaNeural — natural, professional female voice.
 

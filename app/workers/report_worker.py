@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : report_worker.py
+  Purpose : Background worker that generates AI interview reports using Groq LLM scoring.
+====================================================================
+"""
 from __future__ import annotations
 
 import json

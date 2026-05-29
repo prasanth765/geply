@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : config.py
+  Purpose : Application configuration via pydantic-settings. Loads all settings from .env file.
+====================================================================
+"""
 from __future__ import annotations
 
 import logging

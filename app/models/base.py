@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : base.py
+  Purpose : SQLAlchemy async engine setup, base model class with UUID primary keys and timestamps.
+====================================================================
+"""
 from __future__ import annotations
 
 import uuid

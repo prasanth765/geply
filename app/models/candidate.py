@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : candidate.py
+  Purpose : Candidate ORM model: resume, invite token, consent and re-interview tracking.
+====================================================================
+"""
 from __future__ import annotations
 
 from datetime import datetime

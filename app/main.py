@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : main.py
+  Purpose : FastAPI application entry point. Configures middleware, routes, CORS, rate limiting and lifespan events.
+====================================================================
+"""
 from __future__ import annotations
 
 import uuid

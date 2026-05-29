@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : prompt_builder.py
+  Purpose : Builds AI interview system prompts from job description, candidate resume, recruiter info and hygiene check parameters.
+====================================================================
+"""
 from __future__ import annotations
 
 from app.core.constants import COMPANY_NAME

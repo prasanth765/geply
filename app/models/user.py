@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : user.py
+  Purpose : User and Recruiter ORM model: profile, company info and knowledge base.
+====================================================================
+"""
 ﻿from __future__ import annotations
 
 from sqlalchemy import Boolean, String, Text

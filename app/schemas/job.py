@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : job.py
+  Purpose : Job ORM model: JD, requirements, shift info, office locations and interview settings.
+====================================================================
+"""
 from __future__ import annotations
 
 from datetime import datetime

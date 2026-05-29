@@ -1,3 +1,12 @@
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : constants.py
+  Purpose : Shared enums and constants: interview status, candidate status and shift options.
+====================================================================
+"""
 from __future__ import annotations
 
 from enum import StrEnum
