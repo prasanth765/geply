@@ -42,8 +42,6 @@ class AuthService:
         full_name: str,
         company: str = "",
     ) -> UserResponse:
-        if not email.lower().endswith('@gep.com'):
-            raise AuthenticationFailed(reason="Only @gep.com email addresses can register")
         existing = await self.repo.get_by_email(email)
         if existing:
             raise DuplicateEntity("User", "email", email)
