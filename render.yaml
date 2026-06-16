@@ -7,30 +7,3 @@
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
     healthCheckPath: /health
-    envVars:
-      - key: APP_NAME
-        value: geply
-      - key: APP_ENV
-        value: production
-      - key: DEBUG
-        value: false
-      - key: DATABASE_URL
-        value: postgresql+asyncpg://postgres.lpvdibmocqhctdhehdbn:Pras%409789532813@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
-      - key: JWT_SECRET
-        value: QL59QYo-F-D3KgGX1IdXyMR0bzsSjkBcjKSLpjuBawzIcXpGi2thszWHQicfOSuXSLbes6OryI3OGEo7Dz8vsg
-      - key: LLM_BASE_URL
-        value: https://api.groq.com/openai/v1
-      - key: LLM_API_KEY
-        value: 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
-      - key: LLM_MODEL
-        value: llama-3.1-8b-instant
-      - key: DEEPGRAM_API_KEY
-        value: 2c0e588e81bda8d200e60a2685a499548ed51306
-      - key: SUPABASE_URL
-        value: https://lpvdibmocqhctdhehdbn.supabase.co
-      - key: SUPABASE_KEY
-        value: sb_publishable_MpTiEVmo53mDDkmAQqv--A_1NUOtwJ6
-      - key: FRONTEND_URL
-        value: https://geply.vercel.app
-      - key: STORAGE_LOCAL_PATH
-        value: /tmp/uploads
