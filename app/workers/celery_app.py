@@ -1,0 +1,53 @@
+from __future__ import annotations
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : celery_app.py
+====================================================================
+"""
+"""
+====================================================================
+  Project : Geply - AI Interview Platform
+  Company : GEP Worldwide
+  Author  : Prasanth Ragupathy <prasanth.ragupathy@gep.com>
+  File    : celery_app.py
+  Purpose : Module in the Geply AI Interview Platform by Prasanth Ragupathy.
+====================================================================
+"""
+
+from celery import Celery
+
+from app.core.config import get_settings
+
+settings = get_settings()
+
+celery_app = Celery(
+    "geply",
+    broker=settings.celery_broker_url,
+    backend=settings.redis_url,
+)
+
+celery_app.conf.update(
+    task_serializer="json",
+    accept_content=["json"],
+    result_serializer="json",
+    timezone="UTC",
+    enable_utc=True,
+    task_track_started=True,
+    task_acks_late=True,
+    worker_prefetch_multiplier=1,
+    worker_concurrency=10,
+    task_routes={
+        "app.workers.resume_worker.*": {"queue": "resumes"},
+        "app.workers.report_worker.*": {"queue": "reports"},
+        "app.workers.email_worker.*": {"queue": "emails"},
+    },
+)
+
+celery_app.autodiscover_tasks([
+    "app.workers.resume_worker",
+    "app.workers.report_worker",
+    "app.workers.email_worker",
+])
