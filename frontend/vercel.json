@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "https://geply-api.onrender.com/api/:path*"
+      "source": "/api/(.*)",
+      "destination": "https://geply-api.onrender.com/api/"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
