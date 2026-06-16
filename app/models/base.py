@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from typing import AsyncGenerator
 
 import structlog
-from sqlalchemy import MetaData, event
+from sqlalchemy import MetaData, event, DateTime
 from sqlalchemy.ext.asyncio import (
     AsyncAttrs,
     AsyncSession,
@@ -55,9 +55,11 @@ class Base(AsyncAttrs, DeclarativeBase):
         default=lambda: str(uuid.uuid4()),
     )
     created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),
     )
     updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),
         onupdate=lambda: datetime.now(timezone.utc),
     )
