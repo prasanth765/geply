@@ -32,6 +32,7 @@ from app.core.config import configure_logging, get_settings
 from app.core.rate_limit import RateLimitMiddleware
 from app.core.exceptions import AppException
 from app.models.base import create_tables, engine
+from app.models import User, Job, Candidate, Interview, ScheduleSlot, Report, Notification, InterviewQuestion  # noqa: F401 - required for create_tables()
 
 logger = structlog.get_logger()
 
