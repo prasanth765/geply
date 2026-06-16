@@ -61,10 +61,8 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     configure_logging()
     logger.info("app_starting", app=settings.app_name, env=settings.app_env, debug=settings.debug)
 
-    if not settings.is_production:
-        pass  # Tables managed by Supabase migrations
-        # await create_tables()
-        logger.info("database_tables_created")
+    await create_tables()
+    logger.info("database_tables_created")
 
     yield
 
