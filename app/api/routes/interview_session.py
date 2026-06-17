@@ -35,6 +35,7 @@ class SessionResponse(BaseModel):
     job_location: str
     job_shift: str
     recruiter_name: str
+    status: str = "pending"
 
 
 @router.get("/session/{token}", response_model=SessionResponse)
@@ -89,12 +90,19 @@ async def get_interview_session(token: str, db: AsyncSession = Depends(get_db)):
 
     # Find or create interview
     row = (await db.execute(
-        sa_text("SELECT id FROM interviews WHERE candidate_id=:cid AND job_id=:jid LIMIT 1"),
+        sa_text("SELECT id, status FROM interviews WHERE candidate_id=:cid AND job_id=:jid LIMIT 1"),
         {"cid": candidate_id, "jid": job_id}
     )).fetchone()
 
+    interview_status = "pending"
     if row:
         interview_id = str(row[0])
+        db_status = (row[1] or "pending").lower()
+        # Block re-entry once the interview has been completed
+        if db_status in ("completed", "report_ready"):
+            interview_status = "already_completed"
+        else:
+            interview_status = db_status
     else:
         interview_id = str(_uuid.uuid4())
         await db.execute(sa_text(
@@ -117,4 +125,5 @@ async def get_interview_session(token: str, db: AsyncSession = Depends(get_db)):
         job_location=job_location,
         job_shift=job_shift,
         recruiter_name=recruiter_name,
+        status=interview_status,
     )
