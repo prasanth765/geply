@@ -65,6 +65,24 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     await create_tables()
     logger.info("database_tables_created")
 
+    # Idempotent column migrations (safe to run every boot; Postgres only)
+    if "sqlite" not in settings.database_url:
+        from sqlalchemy import text as _sql_text
+        _migrations = [
+            "ALTER TABLE jobs ADD COLUMN IF NOT EXISTS ask_ctc BOOLEAN NOT NULL DEFAULT FALSE",
+            "ALTER TABLE jobs ADD COLUMN IF NOT EXISTS recruiter_questions JSONB",
+            "ALTER TABLE candidates ADD COLUMN IF NOT EXISTS jd_match_score DOUBLE PRECISION",
+            "ALTER TABLE candidates ADD COLUMN IF NOT EXISTS jd_match_verdict VARCHAR(50)",
+            "ALTER TABLE candidates ADD COLUMN IF NOT EXISTS jd_match_breakdown JSONB",
+        ]
+        try:
+            async with engine.begin() as _conn:
+                for _stmt in _migrations:
+                    await _conn.execute(_sql_text(_stmt))
+            logger.info("startup_migrations_applied", count=len(_migrations))
+        except Exception as _mig_exc:
+            logger.error("startup_migrations_failed", error=str(_mig_exc))
+
     yield
 
     await engine.dispose()

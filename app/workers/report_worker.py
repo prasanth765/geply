@@ -40,7 +40,7 @@ def generate_report_sync(interview_id: str) -> dict:
     from sqlalchemy import create_engine, text as sql_text
 
     settings = get_settings()
-    sync_url = settings.database_url.replace("+aiosqlite", "")
+    sync_url = settings.database_url.replace("+aiosqlite", "").replace("+asyncpg", "")
     engine = create_engine(sync_url)
 
     try:
@@ -142,7 +142,7 @@ def generate_report_sync(interview_id: str) -> dict:
                         :integrity_score, :proctor_flags, :screenshots,
                         :recording_url, '', '',
                         0,
-                        datetime('now'), datetime('now')
+                        CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                     )
                 """),
                 {
