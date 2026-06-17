@@ -21,6 +21,8 @@ from sqlalchemy import text as sa_text
 
 from app.api.deps import get_db
 from app.core.config import get_settings
+import structlog
+_logger = structlog.get_logger()
 
 router = APIRouter(prefix="/interview", tags=["interview"])
 
@@ -103,6 +105,7 @@ async def get_interview_session(token: str, db: AsyncSession = Depends(get_db)):
             interview_status = "already_completed"
         else:
             interview_status = db_status
+        _logger.info("session_status_check", interview_id=interview_id, db_status=db_status, returned_status=interview_status)
     else:
         interview_id = str(_uuid.uuid4())
         await db.execute(sa_text(
