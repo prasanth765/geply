@@ -217,6 +217,7 @@ async def chat_with_ai(request: Request, db: DBSession) -> dict:
                 company_kb = kb_row[0] if kb_row else ""
             except Exception as exc:
                 logger.warning("kb_fetch_failed", error=str(exc))
+                await db.rollback()
 
         except Exception as exc:
             logger.warning("context_fetch_failed", error=str(exc))

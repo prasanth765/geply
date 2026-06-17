@@ -69,6 +69,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     if "sqlite" not in settings.database_url:
         from sqlalchemy import text as _sql_text
         _migrations = [
+            "CREATE TABLE IF NOT EXISTS app_settings (key VARCHAR(255) PRIMARY KEY, value TEXT NOT NULL DEFAULT '', created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(), updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW())",
             "ALTER TABLE jobs ADD COLUMN IF NOT EXISTS ask_ctc BOOLEAN NOT NULL DEFAULT FALSE",
             "ALTER TABLE jobs ADD COLUMN IF NOT EXISTS recruiter_questions JSONB",
             "ALTER TABLE candidates ADD COLUMN IF NOT EXISTS jd_match_score DOUBLE PRECISION",
