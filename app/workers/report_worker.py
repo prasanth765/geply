@@ -141,7 +141,7 @@ def generate_report_sync(interview_id: str) -> dict:
                         :key_qa_pairs, :qa_by_category, :recommendations,
                         :integrity_score, :proctor_flags, :screenshots,
                         :recording_url, '', '',
-                        0,
+                        FALSE,
                         CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                     )
                 """),
